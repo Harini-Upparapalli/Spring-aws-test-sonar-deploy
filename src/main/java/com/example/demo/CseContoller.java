@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CseContoller {
-	@GetMapping("/cseadd")
-	public int addCSE(@RequestParam int a, @RequestParam int b) {
-		return a + b;
-	}
+
+    @GetMapping("/cseadd")
+    public String addCSE(@RequestParam int a, @RequestParam int b) {
+        int sum = a + b;
+        return "THE VALUE IS " + sum + " and  ROLL NUMBER IS 24P35A0555";
+    }
 }
